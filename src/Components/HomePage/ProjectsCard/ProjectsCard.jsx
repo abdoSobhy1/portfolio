@@ -3,7 +3,7 @@ import Title from "../../UI/Text/Title/Title";
 import ParHdr from "../../UI/Text/Paragarph/Header";
 import Button from "../../UI/Button/Button";
 
-import classes from "./projectsCard.module.css";
+import classes from "./ProjectsCard.module.css";
 
 const ProjectsCard = () => {
   return (
