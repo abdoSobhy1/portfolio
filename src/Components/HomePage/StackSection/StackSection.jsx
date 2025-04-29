@@ -8,7 +8,7 @@ import nextjs from "../../../assets/images/stack/nextjs.svg";
 import react from "../../../assets/images/stack/reactjs.svg";
 import redux from "../../../assets/images/stack/redux.svg";
 import tailwind from "../../../assets/images/stack/tailwind.svg";
-import bootstrap from "../../../assets/images/stack/bootstrap.svg";
+import bootstrap from "../../../assets/images/stack/Bootstrap.svg";
 import github from "../../../assets/images/stack/github.svg";
 import html from "../../../assets/images/stack/html.svg";
 import css from "../../../assets/images/stack/css.svg";
