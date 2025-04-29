@@ -7,7 +7,7 @@ import Title from "../../Components/UI/Text/Title/Title";
 import { useEffect, useState } from "react";
 import { StackSection } from "../../Components/HomePage/StackSection/StackSection";
 import { ContactSection } from "../../Components/HomePage/ContactsSection/ContactSection";
-import ProjectsCard from "../../Components/HomePage/ProjectsCard/projectsCard";
+import ProjectsCard from "../../Components/HomePage/ProjectsCard/ProjectsCard";
 
 import classes from "./HomePage.module.css";
 import ThemeCard from "../../Components/HomePage/ThemeCard/ThemeCard";
