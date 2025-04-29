@@ -1,0 +1,11 @@
+.projectsCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.projectsCard .btn {
+  align-self: flex-end;
+}

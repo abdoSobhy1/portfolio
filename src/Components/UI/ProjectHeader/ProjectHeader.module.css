@@ -1,0 +1,12 @@
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .projectHeader {
+    width: 100%;
+  }
+}

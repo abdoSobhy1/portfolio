@@ -1,0 +1,39 @@
+.projectCard {
+  border-radius: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.imgContainer {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.projectCard img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.projectCard:hover img {
+  transform: scale(1.05);
+}
+
+.projectTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+  padding: 0 1rem;
+}
+
+.projectTitleContainer h3 {
+  margin-bottom: 0.5rem;
+}
+
+.projectTitleContainer p {
+  letter-spacing: 1px;
+}

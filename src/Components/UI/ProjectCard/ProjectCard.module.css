@@ -1,0 +1,71 @@
+.projectCard {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  max-width: 250px;
+  aspect-ratio: 1;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 2;
+  }
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.1;
+  transition: 0.3s cubic-bezier(0, 0, 0.1, 0.9);
+}
+
+.projectTitleContainer {
+  position: absolute;
+  bottom: 0;
+  padding: 32px;
+  padding-top: 70px;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  transition: 0.3s cubic-bezier(0, 0, 0.1, 0.9);
+  opacity: 0;
+}
+
+.projectTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.projectCard .projectTitle h3 {
+  transform: translateY(30px);
+  transition: 0.3s cubic-bezier(0, 0, 0.1, 0.9);
+}
+
+.projectTitle svg {
+  font-size: 1.5rem;
+  color: var(--gray-20);
+  transition: 0.3s cubic-bezier(0, 0, 0.1, 0.9);
+  transform: translateY(30px) rotate(-90deg);
+}
+
+.projectCard:hover .projectTitleContainer {
+  opacity: 1;
+}
+
+.projectCard:hover .projectImage {
+  scale: 1;
+}
+
+.projectCard:hover .projectTitle svg {
+  transform: translateY(0px) rotate(0deg);
+}
+
+.projectCard:hover .projectTitle h3 {
+  transform: translateY(0px);
+  color: #ccc;
+}

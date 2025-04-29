@@ -1,0 +1,11 @@
+.card {
+  border: 2px solid var(--black-70);
+  border-radius: 32px;
+  padding: 32px;
+  background-color: var(--black-80);
+  transition: 0.3s ease-in-out;
+}
+
+.hover:hover {
+  background-color: rgba(var(--card-hover) / var(--hover-opacity));
+}

@@ -1,0 +1,123 @@
+.homeContainer {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    flex-direction: column;
+  }
+}
+
+.mainContent {
+  flex: 4;
+  overflow: hidden;
+}
+
+.sideBar {
+  flex: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .sideBar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(500px, 95%), 1fr));
+    justify-items: center;
+  }
+}
+
+.row:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  flex: 0.8;
+}
+
+.subheading {
+  color: var(--gray-40);
+  font-size: 1.375rem;
+  line-height: 33px;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+}
+
+.profileCard {
+  padding: 0;
+  overflow: hidden;
+  max-width: 250px;
+}
+
+.profileCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.01;
+  transition: 0.3s cubic-bezier(0, 0, 0.1, 0.9);
+}
+
+.aboutCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  color: var(--gray-20);
+  height: 100%;
+}
+
+.hireMeCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .hireMeCard {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .hireMeCard h3 {
+    line-height: 1;
+  }
+}
+
+.aboutBtn {
+  align-self: flex-end;
+}
+
+.contactRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contactBtn {
+  align-self: flex-end;
+}

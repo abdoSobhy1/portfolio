@@ -1,0 +1,67 @@
+.themeCard {
+  margin-top: 10px;
+  padding: 24px;
+}
+
+.themeCard .row {
+  justify-content: space-between;
+}
+
+.themeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.themeCard .themeInputContainer {
+  position: relative;
+}
+
+.themeCard .themeInput {
+  display: none;
+}
+
+.themeCard .themeInputContainer label {
+  cursor: none;
+  display: block;
+  position: relative;
+  width: 90px;
+  border-radius: 53px;
+  height: 40px;
+  background-color: var(--black-70);
+  border: 2px solid var(--gray-60);
+}
+
+.themeCard .themeInputContainer label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  aspect-ratio: 1;
+  background-color: #090909;
+  border-radius: 50%;
+  left: calc(100% - 4px);
+  transform: translate(-100%, -50%);
+  transition: 0.3s;
+}
+
+.themeCard .themeInputContainer .themeInput:checked + label::before {
+  left: 4px;
+  transform: translateY(-50%);
+}
+
+.themeIcon {
+  position: absolute;
+  top: 58%;
+  left: calc(100% - 10px);
+  transform: translate(-100%, -50%);
+  color: #fee3a4;
+  transition: 0.3s;
+}
+
+.themeCard .themeInputContainer .themeInput:checked + label .themeIcon {
+  left: 10px;
+  top: 58%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,62 @@
+.contactRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px !important;
+}
+
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  aspect-ratio: 1;
+  color: var(--gray-20);
+  font-size: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .contactRow {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    order: 5;
+    margin-top: 1rem;
+  }
+
+  .contactCard {
+    font-size: 2rem;
+    aspect-ratio: 2;
+  }
+}
+
+.contactCard a {
+  display: flex;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.contactCard {
+  position: relative; /* Required for pseudo-element positioning */
+  transition: all 0.4s ease-in-out;
+  overflow: hidden; /* Keep gradient contained */
+}
+
+.contactCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-image: radial-gradient(circle, var(--glow) 20%, transparent);
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contactCard:hover::after {
+  opacity: 1;
+  scale: 1;
+}

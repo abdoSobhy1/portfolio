@@ -1,0 +1,26 @@
+.contentSection {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .contentSectionContainer {
+    padding-inline: 4rem;
+  }
+}
+
+.contentSectionHeader {
+  margin-block: 1rem;
+}
+
+.contentSectionTitle {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.mainImage {
+  aspect-ratio: 21/9;
+}
+
+.list {
+  list-style-position: inside;
+}

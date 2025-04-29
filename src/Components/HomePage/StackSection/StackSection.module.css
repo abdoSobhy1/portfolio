@@ -1,0 +1,82 @@
+.carouselCard {
+  flex: 1;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .carouselCard {
+    width: 100%;
+  }
+}
+
+.stackContainer {
+  max-width: 100%;
+  margin-top: 2rem;
+  overflow: hidden;
+  mask: linear-gradient(
+    to right,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+}
+
+.stack {
+  --speedFactor: 0.5;
+  --duration: 15s;
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+  translate: 50%;
+  animation: scroll var(--duration) linear infinite,
+    scroll calc(var(--duration) / var(--speedFactor)) linear infinite reverse
+      paused;
+  animation-composition: add;
+}
+
+.carouselCard:hover .stack {
+  animation-play-state: running;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+.stackCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 72px;
+  aspect-ratio: 1;
+  background-color: #242424;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stackImage {
+  position: relative;
+  max-height: 100%;
+  z-index: 1;
+}
+
+.bluredImage {
+  opacity: 0;
+  max-height: 100%;
+  scale: 1;
+  position: absolute;
+  z-index: 0;
+  filter: blur(10px);
+  transition: 0.3s;
+}
+
+.stackCard:hover .bluredImage {
+  scale: 1.2;
+  opacity: 1;
+}

@@ -1,0 +1,9 @@
+.aboutContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(500px, 95%), 1fr));
+  gap: 1rem;
+}
+
+.aboutContainer > div {
+  height: fit-content;
+}

@@ -1,0 +1,52 @@
+.button {
+  color: var(--text-light, var(--gray-20));
+  border: 1px solid var(--gray-50);
+  border-radius: 100px;
+  /* padding: 0.7rem; */
+  font-weight: 500;
+  /* aspect-ratio: 1; */
+  overflow: hidden;
+}
+
+.button.content {
+  padding: 0.35rem 0.35rem 0.35rem 0.7rem;
+}
+
+.button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkText {
+  font-size: 1.125rem;
+  color: var(--text-light, var(--gray-20));
+}
+
+.button svg {
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 3px;
+}
+
+.button .icons {
+  rotate: 45deg;
+  width: 38px;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.button .icons div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  transition: 0.3s cubic-bezier(0, 0, 0.1, 0.9);
+}
+
+.button:hover .icons div,
+.button .icons div.hovered {
+  transform: translateY(calc(-50% + 3px));
+}
